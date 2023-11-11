@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dom </title>
+</head>
+<body>
+
+    <h1>some text</h1>
+    <ul id="item">
+
+    </ul>
+    <div id="container">
+        <article class="blog">
+            <h3>My new Blog-1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla repudiandae corrupti non ullam nostrum nemo doloribus, molestias debitis illum expedita!</p>
+        </article>
+        <article class="blog">
+            <h3 id="two">My new Blog-2</h3>
+            <p>Deleniti voluptate nostrum pariatur architecto ea mollitia iusto beatae deserunt repellendus, voluptas iste asperiores ducimus totam rem, reiciendis placeat in.</p>
+        </article>
+        <article class="blog">
+            <h3 id="three">My new Blog-3</h3>
+            <p>Dolores ipsam incidunt nam officiis vitae quaerat expedita officia corrupti porro repellat sunt minima provident dicta beatae illum, distinctio laborum!</p>
+        </article>
+        <article class="blog">
+            <h3 id="three">My new Blog-4</h3>
+            <p>Dolores ipsam incidunt nam officiis vitae quaerat expedita officia corrupti porro repellat sunt minima provident dicta beatae illum, distinctio laborum!</p>
+        </article>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const article = document.createElement("article");
+        article.classList.add("blog")
+        const h3 = document.createElement("h3");
+        h3.innerText = "My new  blog-5";
+        const p = document.createElement("p");
+        p.innerText =" Dolores ipsam incidunt nam officiis vitae quaerat expedita officia corrupti porro repellat sunt minima provident dicta beatae illum, distinctio laborum."
+        article.appendChild(h3)
+        article.appendChild(p)
+        console.log(article);
+
+        const div = document.getElementById("container");
+        div.appendChild(article)
+
+
+        const articles = document.getElementsById("blog");
+        console.log(articles)
+
+            for (const article of articles){
+                article.style.border = "2px solid gray"
+                article.style.margin = "20px "
+                article.style.padding = "20px "
+            }
+
+    const li = document.createElement("li");
+        li.innerText = "this element is created by us"
+        const ul = document.getElementById("item");
+        ul.appendChild(li)
+
+
+
+
+
+        // const student ={ name:"manna", age : 14, height: 5.5 }
+        // console.log( student.age );
+        // // console.log(document.body);
+
+
+        // const secondTitle = document.getElementById("two");
+        // console.log(secondTitle.getAttribute("id"));
+        // secondTitle.innerText = "Our NEW TEXT will be added"
+        // secondTitle.style.backgroundColor = "green"
+        // secondTitle.style.padding = "20px"
+        // console.log(secondTitle);
+
+        // console.log(secondTitle.getAttribute("style"));
+
+        // const tags = document.getElementsByTagName("h3");
+        // // console.log(tags);
+
+        // for (const tag of tags ){
+        //     // console.log(tag.innerText);
+        // }
+
+        // // const paras = document.getElementsByTagName("p");
+        // // for (const para of paras ){
+        // //     // console.log(para.innerText);
+        // // }
+
+        // // const articles = document.getElementsByClassName("blog");
+        // // console.log(articles);
+        // // for (const articl of articles){
+        // //     console.log(articl);
+        // //     articl.style.border = "2px solid gray"
+        // //     articl.style.margin = "20px "
+        // //     articl.style.padding = "20px "
+        // // }
+
+        // const selector = document.querySelectorAll(".blog p");
+        // // console.log(selector);
+    </script>
+</body>
+</html>
